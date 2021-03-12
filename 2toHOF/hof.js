@@ -33,3 +33,30 @@ function remove(element){
 
 
 remove("d")
+
+
+
+//////Concat Array//////
+//////////////////////////
+
+
+function concat(input1, input2){
+
+    const newArray = input1.concat(input2)
+    let finalArray = []
+
+    newArray.forEach(singular => {
+        if (finalArray.indexOf(singular) == -1){
+            finalArray.push(singular)
+        }
+    });
+
+    finalArray.sort((a,b) => a - b)
+
+    console.log(finalArray)
+}
+
+const array1 = [1, 3, 4, 1, 5, 6, 72]
+const array2 = [7, 2, 4, 1, 5, 72, 69]
+
+concat(array1, array2)
